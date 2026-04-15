@@ -16,7 +16,7 @@ import ProductCard from "./ProductCard";
 const SHEET_ID = "11KxoJvcnjyTbe03Z264WrCngGDBMZeAWu-92InU3-40"; // ← Replace this
 const SHEET_URL = `https://opensheet.elk.sh/${SHEET_ID}/Sheet1`;
 
-const TABS = ["Custom Tailoring", "Handcrafted Shoes"];
+const TABS = ["Custom Tailoring", "Handcrafted Shoes", "Textile"];
 
 const SOCIAL_LINKS = {
   instagram: "https://instagram.com/slaek_fashion_house",
@@ -41,9 +41,9 @@ function Navbar() {
         scrolled ? "bg-white shadow-sm py-3" : "bg-transparent py-6"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-around">
         {/* Logo */}
-        <img src="/logo.png" className="w-20 h-20"/>
+        <img src="/logo.PNG" className="w-15 h-20"/>
 
         {/* Desktop Nav Links */}
         <div className="hidden md:flex items-center gap-10">
@@ -153,7 +153,7 @@ function Hero() {
         </p>
 
         {/* Brand Name */}
-        <div className="div flex justify-center">  <img src="./public/logo2.png" className="w-60 py-5   h-60"/></div>
+        <div className="div flex justify-center">  <img src="/logo2.png" className="w-60 py-5   h-60"/></div>
     
 
         {/* Divider */}
@@ -165,13 +165,16 @@ function Hero() {
 
         {/* Tagline */}
         <p className="text-gray-300 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-4 font-light tracking-wide">
-          Where precision meets passion. Every stitch, every sole — crafted by hand for those
-          who demand nothing less than extraordinary.
+          Welcome to SLAEK House
+Where every detail is stitched, crafted, and curated with intention.
+
+We are more than a brand—we are a destination. Discover the full SLAEK experience through our four distinct pillars:
+✦ SLAEK Fashion House: Bespoke tailoring for the modern man and woman.
+✦ SLAEK Shoes: Artisanal footwear, handmade by us.
+✦ SLAEK Makeover: From radiant everyday beauty to timeless bridal elegance.
+✦ SLAEK Collection: A curated marketplace of premium fabrics, veils, Shaddah, laces, shoes, and bags.
         </p>
-        <p className="text-gray-500 text-sm leading-relaxed max-w-xl mx-auto mb-12 tracking-wide">
-          Bespoke tailoring and handcrafted footwear, made-to-measure for the discerning individual.
-          Your vision. Our craft. A legacy of elegance.
-        </p>
+       
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
