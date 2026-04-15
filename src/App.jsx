@@ -21,7 +21,7 @@ const TABS = ["Custom Tailoring", "Handcrafted Shoes"];
 const SOCIAL_LINKS = {
   instagram: "https://instagram.com/slaek_fashion_house",
   whatsapp: "https://wa.me/2348086405238",
-  tiktok: "https://tiktok.com/@slaekhouse",
+  tiktok: "https://tiktok.com/@slaek_house",
 };
 
 // ─── NAVBAR ───────────────────────────────────────────────────────────────────
@@ -43,7 +43,7 @@ function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <img src="./public/logo.png" className="w-20 h-20"/>
+        <img src="/logo.png" className="w-20 h-20"/>
 
         {/* Desktop Nav Links */}
         <div className="hidden md:flex items-center gap-10">
@@ -219,7 +219,7 @@ function About() {
             style={{
               background: "linear-gradient(135deg, #0a0a0a 0%, #2a2a2a 100%)",
             }}
-          ><img src="./public/shoe.jpg"/>
+          ><img src="/shoe.jpg"/>
             <div
               className="absolute inset-6 border opacity-20"
               style={{ borderColor: "#B8962E" }}

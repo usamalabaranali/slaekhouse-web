@@ -16,7 +16,7 @@ export default function ProductCard({ product }) {
       <div className="relative overflow-hidden bg-gray-50 aspect-[3/4]">
         {image ? (
           <img
-            src={`https://lh3.googleusercontent.com/d/1KXU87OoW_a5ewF_qRzgURSzYIR1tjcsj=s1000`}
+            src={`${image}=s1000`}
             alt={name}
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -40,7 +40,7 @@ export default function ProductCard({ product }) {
         </div>
 
         {/* Hover Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-500 pointer-events-none" />
+        {/* <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-500 pointer-events-none" /> */}
       </div>
 
       {/* Product Info */}
