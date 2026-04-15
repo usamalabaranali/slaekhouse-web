@@ -18,6 +18,7 @@ export default function ProductCard({ product }) {
           <img
             src={`https://lh3.googleusercontent.com/d/1KXU87OoW_a5ewF_qRzgURSzYIR1tjcsj=s1000`}
             alt={name}
+            referrerPolicy="no-referrer"
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
         ) : (
