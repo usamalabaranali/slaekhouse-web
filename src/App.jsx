@@ -13,13 +13,13 @@ import ProductCard from "./ProductCard";
 //    name | price | description | image | category
 //    category must be either "Custom Tailoring" or "Handcrafted Shoes"
 
-const SHEET_ID = "YOUR_GOOGLE_SHEET_ID"; // ← Replace this
+const SHEET_ID = "11KxoJvcnjyTbe03Z264WrCngGDBMZeAWu-92InU3-40"; // ← Replace this
 const SHEET_URL = `https://opensheet.elk.sh/${SHEET_ID}/Sheet1`;
 
 const TABS = ["Custom Tailoring", "Handcrafted Shoes"];
 
 const SOCIAL_LINKS = {
-  instagram: "https://instagram.com/slaekhouse",
+  instagram: "https://instagram.com/slaek_fashion_house",
   whatsapp: "https://wa.me/2348086405238",
   tiktok: "https://tiktok.com/@slaekhouse",
 };
@@ -43,22 +43,7 @@ function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <a href="#hero" className="flex flex-col leading-none">
-          <span
-            className={`text-2xl font-bold tracking-[0.3em] uppercase transition-colors duration-300 ${
-              scrolled ? "text-black" : "text-white"
-            }`}
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
-            SLAEK
-          </span>
-          <span
-            className="text-xs tracking-[0.5em] uppercase font-light"
-            style={{ color: "#B8962E" }}
-          >
-            House
-          </span>
-        </a>
+        <img src="./public/logo.png" className="w-20 h-20"/>
 
         {/* Desktop Nav Links */}
         <div className="hidden md:flex items-center gap-10">
@@ -158,24 +143,18 @@ function Hero() {
         style={{ borderColor: "#B8962E" }}
       />
 
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center item-center px-6 max-w-4xl mx-auto">
         {/* Eyebrow */}
         <p
           className="text-xs tracking-[0.5em] uppercase mb-8 font-medium"
           style={{ color: "#B8962E" }}
         >
-          Est. Lagos · Nigeria
+          Est. Kaduna · Nigeria
         </p>
 
         {/* Brand Name */}
-        <h1
-          className="text-7xl md:text-9xl font-bold text-white uppercase tracking-[0.15em] leading-none mb-6"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-        >
-          SLAEK
-          <br />
-          <span className="font-light italic">House</span>
-        </h1>
+        <div className="div flex justify-center">  <img src="./public/logo2.png" className="w-60 py-5   h-60"/></div>
+    
 
         {/* Divider */}
         <div className="flex items-center justify-center gap-4 mb-10">
@@ -240,7 +219,7 @@ function About() {
             style={{
               background: "linear-gradient(135deg, #0a0a0a 0%, #2a2a2a 100%)",
             }}
-          >
+          ><img src="./public/shoe.jpg"/>
             <div
               className="absolute inset-6 border opacity-20"
               style={{ borderColor: "#B8962E" }}
@@ -264,6 +243,7 @@ function About() {
             className="absolute -bottom-4 -right-4 w-24 h-24 border"
             style={{ borderColor: "#B8962E" }}
           />
+          
         </div>
 
         {/* Right: Text */}
@@ -284,7 +264,7 @@ function About() {
           <div className="space-y-5 text-gray-600 leading-relaxed text-sm">
             <p>
               Slaek House was born from a singular obsession: that clothing and footwear
-              should feel as remarkable as the people who wear them. Founded in Lagos, our
+              should feel as remarkable as the people who wear them. Founded in Kaduna, our
               atelier blends West African craftsmanship with contemporary luxury design.
             </p>
             <p>
@@ -520,7 +500,7 @@ function Footer() {
             © {new Date().getFullYear()} SLAEK HOUSE. All rights reserved.
           </p>
           <p className="text-xs tracking-[0.2em] uppercase" style={{ color: "#B8962E" }}>
-            Crafted in Lagos · Nigeria
+            Crafted in Kaduna · Nigeria
           </p>
         </div>
       </div>
@@ -543,19 +523,19 @@ export default function App() {
     document.head.appendChild(link);
 
     // Fetch products from Google Sheet via opensheet proxy
-    if (SHEET_ID === "YOUR_GOOGLE_SHEET_ID") {
-      // Demo data when Sheet ID not configured
-      setProducts([
-        { name: "Lagos Power Suit", price: "₦185,000", description: "Three-piece bespoke wool suit, fully lined with hand-finished buttonholes.", image: "", category: "Custom Tailoring" },
-        { name: "Agbada Royale", price: "₦220,000", description: "Contemporary embroidered Agbada, made with premium Aso-Oke fabric.", image: "", category: "Custom Tailoring" },
-        { name: "The Executive Blazer", price: "₦95,000", description: "Single-breasted Italian-cut blazer tailored to your exact measurements.", image: "", category: "Custom Tailoring" },
-        { name: "Oxford Brogues No. 1", price: "₦75,000", description: "Full-grain calf leather, hand-stitched Goodyear welt construction.", image: "", category: "Handcrafted Shoes" },
-        { name: "Chelsea Boot Elite", price: "₦68,000", description: "Sleek pull-on boot in suede with a hand-polished leather sole.", image: "", category: "Handcrafted Shoes" },
-        { name: "The Lagos Loafer", price: "₦55,000", description: "Penny loafer with Nigerian Ankara lining, hand-burnished finish.", image: "", category: "Handcrafted Shoes" },
-      ]);
-      setLoading(false);
-      return;
-    }
+    // if (SHEET_ID === "11KxoJvcnjyTbe03Z264WrCngGDBMZeAWu-92InU3-40") {
+    //   // Demo data when Sheet ID not configured
+    //   setProducts([
+    //     { name: "Lagos Power Suit", price: "₦185,000", description: "Three-piece bespoke wool suit, fully lined with hand-finished buttonholes.", image: "", category: "Custom Tailoring" },
+    //     { name: "Agbada Royale", price: "₦220,000", description: "Contemporary embroidered Agbada, made with premium Aso-Oke fabric.", image: "", category: "Custom Tailoring" },
+    //     { name: "The Executive Blazer", price: "₦95,000", description: "Single-breasted Italian-cut blazer tailored to your exact measurements.", image: "", category: "Custom Tailoring" },
+    //     { name: "Oxford Brogues No. 1", price: "₦75,000", description: "Full-grain calf leather, hand-stitched Goodyear welt construction.", image: "", category: "Handcrafted Shoes" },
+    //     { name: "Chelsea Boot Elite", price: "₦68,000", description: "Sleek pull-on boot in suede with a hand-polished leather sole.", image: "", category: "Handcrafted Shoes" },
+    //     { name: "The Lagos Loafer", price: "₦55,000", description: "Penny loafer with Nigerian Ankara lining, hand-burnished finish.", image: "", category: "Handcrafted Shoes" },
+    //   ]);
+    //   setLoading(false);
+    //   return;
+    // }
 
     fetch(SHEET_URL)
       .then((r) => {

@@ -16,7 +16,7 @@ export default function ProductCard({ product }) {
       <div className="relative overflow-hidden bg-gray-50 aspect-[3/4]">
         {image ? (
           <img
-            src={image}
+            src={`https://lh3.googleusercontent.com/d/1KXU87OoW_a5ewF_qRzgURSzYIR1tjcsj=s1000`}
             alt={name}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
