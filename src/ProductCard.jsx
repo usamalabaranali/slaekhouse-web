@@ -2,7 +2,7 @@
 // A luxury, minimalist product card for Slaek House
 
 export default function ProductCard({ product }) {
-  const { name, price, description, image, category } = product;
+  const { name, price, description, image, image2, category } = product;
 
   const whatsappNumber = "2348086405238";
   const message = encodeURIComponent(
